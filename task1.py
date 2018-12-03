@@ -23,7 +23,8 @@ def arithmetic():
             print(not_number.format(b)) 
             sys.exit(0) 
     c = input('What opeartion should we do? You can choose between +, - or /...') 
-    operations = {'+': (first_number + second_number), '-': (first_number - second_number), '*': (first_number * second_number), '/': (first_number / second_number)} 
+    operations = {'+': (first_number + second_number), '-': (first_number - second_number), 
+                  '*': (first_number * second_number), '/': (first_number / second_number)} 
     if (c not in operations): 
         print('The given operation is not recognized! Try again.') 
         sys.exit(0) 
