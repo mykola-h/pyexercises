@@ -32,3 +32,11 @@ def bank():
         print('After {} years you will have {} on your deposit account.'.format(years, amount)) 
  
 bank() 
+
+next = ('Try again? y/n...')
+if (next is 'y'): 
+     bank()
+else:
+     print('Closing...')
+     clear()
+     sys.exit(0)
