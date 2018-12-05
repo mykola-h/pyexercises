@@ -1,4 +1,5 @@
 import sys 
+import numbers 
  
 print('This function calculates amount of money on the bank deposit account after its time has passed') 
  
@@ -14,6 +15,7 @@ def bank():
             sys.exit(0) 
     if (amount <= 0): 
         print('Amount cannot be equal 0 or a negative value! Try again.') 
+        sys.exit(0) 
     else: 
         y = input('Please, enter period for the deposit account in years...') 
         try: 
@@ -26,17 +28,22 @@ def bank():
                 sys.exit(0) 
     if (years <= 0): 
         print('Period cannot be equal 0 or a negative value! Try again.') 
+        sys.exit(0) 
+    elif (isinstance(years, int)): 
+        i = 1 
+        while (i <= years): 
+            amount = amount * 1.1 
+            i = i + 1 
+        fin_amount = round(amount, 2) 
+        print('After {} years you will have {} on your deposit account.'.format(years, fin_amount)) 
     else: 
-        for i in years: # it's not working! 
-            amount = amount * 1.2 
-        print('After {} years you will have {} on your deposit account.'.format(years, amount)) 
- 
-bank() 
+        int_years = round(years) 
+        dec_years = years - int_years 
+        x = 1 
+        while (x <= int_years): 
+            amount = amount * 1.1 
+            x = x + 1 
+        fin_amount = round(amount, 2) + ((dec_years * 0.1 / 1) * amount) 
+        print('After {} years you will have {} on your deposit account.'.format(years, fin_amount)) 
 
-next = ('Try again? y/n...')
-if (next is 'y'): 
-     bank()
-else:
-     print('Closing...')
-     clear()
-     sys.exit(0)
+bank() 
