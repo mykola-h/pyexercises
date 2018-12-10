@@ -1,8 +1,7 @@
-import sys 
 import math 
 import numbers 
  
-print('This function calculates amount of money on the bank deposit account with 10% per year.') 
+print('This function calculates amount of money on the bank deposit account after its time has passed') 
 cont = 'y' 
  
 def bank(): 
@@ -14,10 +13,10 @@ def bank():
             amount = float(a) 
         except ValueError: 
             print('The given value is not a number! Try again.') 
-            sys.exit(0) 
+            return  
     if (amount <= 0): 
         print('Amount cannot be equal 0 or a negative value! Try again.') 
-        sys.exit(0) 
+        return 
     else: 
         y = input('Please, enter period for the deposit account in years...') 
         try: 
@@ -27,10 +26,10 @@ def bank():
                 years = float(y) 
             except ValueError: 
                 print('The given value is not a number! Try again.') 
-                sys.exit(0) 
+                return 
     if (years <= 0): 
         print('Period cannot be equal 0 or a negative value! Try again.') 
-        sys.exit(0) 
+        return 
     elif (isinstance(years, int)): 
         i = 1 
         while (i <= years): 
@@ -48,7 +47,8 @@ def bank():
         dec_amount = amount * ((dec_years * 0.1) + 1) 
         fin_amount = round(dec_amount, 2) 
         print('After {} years you will have {} on your deposit account.'.format(years, fin_amount)) 
-
+ 
 while (cont is 'y'): 
     bank() 
     cont = input('Try again? [y/n]...') 
+

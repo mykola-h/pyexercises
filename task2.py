@@ -1,7 +1,5 @@
-import sys 
- 
 print('This function checks if the given year is a leap year.')
-cont = 'y' 
+cont = 'y'  
  
 def is_year_leap(): 
     a = input('Please, enter a year...') 
@@ -12,7 +10,7 @@ def is_year_leap():
         year = int(a) 
     except ValueError: 
         print(not_year.format(a)) 
-        sys.exit(0) 
+        return 
     if ((year % 4) != 0): 
         print(not_leap_year.format(year)) 
     elif ((year % 100) != 0): 

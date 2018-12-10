@@ -1,5 +1,3 @@
-import sys 
- 
 print('This function returns the name of a season based on the given month.') 
 cont = 'y' 
  
@@ -9,10 +7,10 @@ def season():
         month = int(a) 
     except ValueError: 
         print('The given value is not an integer number! Try again.') 
-        sys.exit(0) 
+        return 
     if (month <= 0) or (month >= 13): 
         print('The ordinal number of a month can be only between 1 and 12! Try again.') 
-        sys.exit(0) 
+        return 
     elif (2 < month < 6): 
         print('This is spring') 
     elif (5 < month < 9): 
@@ -21,7 +19,7 @@ def season():
         print('This is autumn') 
     else:
         print('This is winter') 
-
- while (cont is 'y'): 
+ 
+while (cont is 'y'): 
     season() 
     cont = input('Try again? [y/n]...') 
