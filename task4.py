@@ -1,6 +1,7 @@
 import sys 
  
 print('This function returns the name of a season based on the given month.') 
+cont = 'y' 
  
 def season(): 
     a = input('Please, enter the ordinal number of a month...') 
@@ -21,4 +22,6 @@ def season():
     else:
         print('This is winter') 
 
- season() 
+ while (cont is 'y'): 
+    season() 
+    cont = input('Try again? [y/n]...') 
