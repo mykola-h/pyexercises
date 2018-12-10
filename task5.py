@@ -3,6 +3,7 @@ import math
 import numbers 
  
 print('This function calculates amount of money on the bank deposit account with 10% per year.') 
+cont = 'y' 
  
 def bank(): 
     a = input('Please, enter amount of money for the deposit account...') 
@@ -48,4 +49,6 @@ def bank():
         fin_amount = round(dec_amount, 2) 
         print('After {} years you will have {} on your deposit account.'.format(years, fin_amount)) 
 
-bank() 
+while (cont is 'y'): 
+    bank() 
+    cont = input('Try again? [y/n]...') 
