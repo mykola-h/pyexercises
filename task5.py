@@ -2,7 +2,7 @@ import sys
 import math 
 import numbers 
  
-print('This function calculates amount of money on the bank deposit account with years.') 
+print('This function calculates amount of money on the bank deposit account with 10% per year.') 
  
 def bank(): 
     a = input('Please, enter amount of money for the deposit account...') 
