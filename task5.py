@@ -1,4 +1,5 @@
 import sys 
+import math 
 import numbers 
  
 print('This function calculates amount of money on the bank deposit account after its time has passed') 
@@ -37,13 +38,14 @@ def bank():
         fin_amount = round(amount, 2) 
         print('After {} years you will have {} on your deposit account.'.format(years, fin_amount)) 
     else: 
-        int_years = round(years) 
+        int_years = math.floor(years) 
         dec_years = years - int_years 
         x = 1 
         while (x <= int_years): 
             amount = amount * 1.1 
             x = x + 1 
-        fin_amount = round(amount, 2) + ((dec_years * 0.1 / 1) * amount) 
+        dec_amount = amount * ((dec_years * 0.1) + 1) 
+        fin_amount = round(dec_amount, 2) 
         print('After {} years you will have {} on your deposit account.'.format(years, fin_amount)) 
 
 bank() 
