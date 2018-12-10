@@ -2,6 +2,7 @@ import sys
 import math 
  
 print('This function calculates the perimeter, area and diagonal of a square based on the given side.')
+cont = 'y' 
  
 def square(): 
     not_number = 'The given value "{}" is not a number! Try again.' 
@@ -24,4 +25,6 @@ def square():
         diagonal = side * math.sqrt(2) 
         print(result.format(side, perimeter, area, diagonal)) 
  
-square() 
+while (cont is 'y'): 
+    square() 
+    cont = input('Try again? [y/n]...') 
