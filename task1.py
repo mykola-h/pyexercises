@@ -1,6 +1,7 @@
 import sys 
  
 print('This function performs simple arithmetic operations with the given two numbers.')
+cont = 'y' 
  
 def arithmetic(): 
     not_number = 'The given value "{}" is not a number! Try again.' 
@@ -32,4 +33,6 @@ def arithmetic():
         result = operations[c] 
         print('The result is: {}'.format(result)) 
  
-arithmetic() 
+while (cont is 'y'): 
+    arithmetic() 
+    cont = input('Try again? [y/n]...') 
