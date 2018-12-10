@@ -1,6 +1,7 @@
 import sys 
  
 print('This function checks if the given year is a leap year.')
+cont = 'y' 
  
 def is_year_leap(): 
     a = input('Please, enter a year...') 
@@ -21,4 +22,6 @@ def is_year_leap():
     else: 
         print(leap_year.format(year)) 
  
-is_year_leap() 
+while (cont is 'y'): 
+    is_year_leap() 
+    cont = input('Try again? [y/n]...') 
