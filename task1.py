@@ -23,11 +23,7 @@ def arithmetic():
         except ValueError: 
             print(not_number.format(b)) 
             return 
-<<<<<<< HEAD
     c = input(color.yellow + 'What opeartion should we do? You can choose between +, - or /...' + color.end) 
-    operations = {'+': (first_number + second_number), '-': (first_number - second_number), '*': (first_number * second_number), '/': (first_number / second_number)} 
-=======
-    c = input('What opeartion should we do? You can choose between +, - or /...') 
     operations = {'+': (first_number + second_number), '-': (first_number - second_number),
                   '*': (first_number * second_number), '/': (first_number / second_number)} 
     if (c not in operations): 
