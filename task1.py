@@ -1,6 +1,6 @@
 from colors import color
 
-print(color.red + 'This function performs simple arithmetic operations with the given two numbers.' + color.end)
+print(color.yellow + 'This function performs simple arithmetic operations with the given two numbers.' + color.end)
 cont = 'y'  
 
 def arithmetic(): 
@@ -23,7 +23,7 @@ def arithmetic():
         except ValueError: 
             print(not_number.format(b)) 
             return 
-    c = input(color.yellow + 'What opeartion should we do? You can choose between +, - or /...' + color.end) 
+    c = input(color.green + 'What operation should we do? You can choose between +, -, * or /...' + color.end) 
     operations = {'+': (first_number + second_number), '-': (first_number - second_number),
                   '*': (first_number * second_number), '/': (first_number / second_number)} 
     if (c not in operations): 

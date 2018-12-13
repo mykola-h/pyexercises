@@ -1,11 +1,13 @@
-print('This function checks if the given year is a leap year.')
+from colors import color
+
+print(color.yellow + 'This function checks if the given year is a leap year.' + color.end)
 cont = 'y'  
  
 def is_year_leap(): 
-    a = input('Please, enter a year...') 
-    not_year = 'The given value "{}" is not a year.' 
-    leap_year = 'The {} is a leap year.' 
-    not_leap_year = 'The {} is not a leap year.' 
+    a = input(color.green + 'Please, enter a year...' + color.end) 
+    not_year = color.red + 'The given value "{}" is not a year.' + color.end
+    leap_year = color.cyan + 'The {} is a leap year.' + color.end
+    not_leap_year = color.cyan + 'The {} is not a leap year.' + color.end
     try: 
         year = int(a) 
     except ValueError: 
@@ -22,4 +24,4 @@ def is_year_leap():
  
 while (cont is 'y'): 
     is_year_leap() 
-    cont = input('Try again? [y/n]...') 
+    cont = input(color.yellow + 'Try again? [y/n]...' + color.end) 

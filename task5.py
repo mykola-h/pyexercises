@@ -1,34 +1,35 @@
 import math 
 import numbers 
+from colors import color
  
-print('This function calculates amount of money on the bank deposit account after its time has passed') 
+print(color.yellow + 'This function calculates amount of money on the bank deposit account after its time has passed' + color.end) 
 cont = 'y' 
  
 def bank(): 
-    a = input('Please, enter amount of money for the deposit account...') 
+    a = input(color.green + 'Please, enter amount of money for the deposit account...' + color.end) 
     try: 
         amount = int(a) 
     except ValueError: 
         try: 
             amount = float(a) 
         except ValueError: 
-            print('The given value is not a number! Try again.') 
+            print(color.red + 'The given value is not a number! Try again.' + color.end) 
             return  
     if (amount <= 0): 
-        print('Amount cannot be equal 0 or a negative value! Try again.') 
+        print(color.red + 'Amount cannot be equal 0 or a negative value! Try again.' + color.end) 
         return 
     else: 
-        y = input('Please, enter period for the deposit account in years...') 
+        y = input(color.green + 'Please, enter period for the deposit account in years...' + color.end) 
         try: 
             years = int(y) 
         except ValueError: 
             try: 
                 years = float(y) 
             except ValueError: 
-                print('The given value is not a number! Try again.') 
+                print(color.red + 'The given value is not a number! Try again.' + color.end) # need to add a text variable
                 return 
     if (years <= 0): 
-        print('Period cannot be equal 0 or a negative value! Try again.') 
+        print(color.red + 'Period cannot be equal 0 or a negative value! Try again.' + color.end) 
         return 
     elif (isinstance(years, int)): 
         i = 1 
@@ -36,7 +37,7 @@ def bank():
             amount = amount * 1.1 
             i = i + 1 
         fin_amount = round(amount, 2) 
-        print('After {} years you will have {} on your deposit account.'.format(years, fin_amount)) 
+        print(color.cyan + 'After {} years you will have {} on your deposit account.'.format(years, fin_amount) + color.end) # need to add a text variable
     else: 
         int_years = math.floor(years) 
         dec_years = years - int_years 
@@ -46,9 +47,9 @@ def bank():
             x = x + 1 
         dec_amount = amount * ((dec_years * 0.1) + 1) 
         fin_amount = round(dec_amount, 2) 
-        print('After {} years you will have {} on your deposit account.'.format(years, fin_amount)) 
+        print(color.cyan + 'After {} years you will have {} on your deposit account.'.format(years, fin_amount) + color.end) # need to add a text variable 
  
 while (cont is 'y'): 
     bank() 
-    cont = input('Try again? [y/n]...') 
+    cont = input(color.yellow + 'Try again? [y/n]...' + color.end) 
 

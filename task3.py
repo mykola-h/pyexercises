@@ -1,13 +1,14 @@
-import math 
+import math
+from colors import color
  
-print('This function calculates the perimeter, area and diagonal of a square based on the given side.')
+print(color.yellow + 'This function calculates the perimeter, area and diagonal of a square based on the given side.' + color.end)
 cont = 'y' 
   
 def square(): 
-    not_number = 'The given value "{}" is not a number! Try again.' 
-    invalid_number = 'The value of the side of a square cannot be 0 or less! Try again.' 
-    result = 'The square with the side value {0} has:\nPerimeter: {1};\nArea: {2};\nDiagonal: {3}.' 
-    a = input('Please, enter the side of a square...') 
+    not_number = color.red + 'The given value "{}" is not a number! Try again.' + color.end
+    invalid_number = color.red + 'The value of the side of a square cannot be 0 or less! Try again.' + color.end
+    result = color.cyan + 'The square with the side value {0} has:\nPerimeter: {1};\nArea: {2};\nDiagonal: {3}.' + color.end
+    a = input(color.green + 'Please, enter the side of a square...' + color.end) 
     try: 
         side = int(a) 
     except ValueError: 
@@ -26,4 +27,4 @@ def square():
  
 while (cont is 'y'): 
     square() 
-    cont = input('Try again? [y/n]...')  
+    cont = input(color.yellow + 'Try again? [y/n]...' + color.end)  

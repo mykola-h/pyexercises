@@ -1,25 +1,27 @@
-print('This function returns the name of a season based on the given month.') 
+from colors import color
+
+print(color.yellow + 'This function returns the name of a season based on the given month.' + color.end) 
 cont = 'y' 
  
 def season(): 
-    a = input('Please, enter the ordinal number of a month...') 
+    a = input(color.green + 'Please, enter the ordinal number of a month...' + color.end) 
     try: 
         month = int(a) 
     except ValueError: 
-        print('The given value is not an integer number! Try again.') 
+        print(color.red + 'The given value is not an integer number! Try again.' + color.end) 
         return 
     if (month <= 0) or (month >= 13): 
-        print('The ordinal number of a month can be only between 1 and 12! Try again.') 
+        print(color.red + 'The ordinal number of a month can be only between 1 and 12! Try again.' + color.end) 
         return 
     elif (2 < month < 6): 
-        print('This is spring') 
+        print(color.cyan + 'This is spring' + color.end) 
     elif (5 < month < 9): 
-        print('This is summer') 
+        print(color.cyan + 'This is summer' + color.end) 
     elif (8 < month < 12): 
-        print('This is autumn') 
+        print(color.cyan + 'This is autumn' + color.end) 
     else:
-        print('This is winter') 
+        print(color.cyan + 'This is winter' + color.end) 
  
 while (cont is 'y'): 
     season() 
-    cont = input('Try again? [y/n]...') 
+    cont = input(color.yellow + 'Try again? [y/n]...' + color.end) 
