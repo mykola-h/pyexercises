@@ -8,19 +8,19 @@ def season():
     try: 
         month = int(a) 
     except ValueError: 
-        print(color.red + 'The given value is not an integer number! Try again.' + color.end) 
+        print(color.red + 'The given value is not an integer number!' + color.end) 
         return 
     if (month <= 0) or (month >= 13): 
-        print(color.red + 'The ordinal number of a month can be only between 1 and 12! Try again.' + color.end) 
+        print(color.red + 'The ordinal number of a month can be only between 1 and 12!' + color.end) 
         return 
     elif (2 < month < 6): 
-        print(color.cyan + 'This is spring' + color.end) 
+        print(color.cyan + 'This is spring.' + color.end) 
     elif (5 < month < 9): 
-        print(color.cyan + 'This is summer' + color.end) 
+        print(color.cyan + 'This is summer.' + color.end) 
     elif (8 < month < 12): 
-        print(color.cyan + 'This is autumn' + color.end) 
+        print(color.cyan + 'This is autumn.' + color.end) 
     else:
-        print(color.cyan + 'This is winter' + color.end) 
+        print(color.cyan + 'This is winter.' + color.end) 
  
 while (cont is 'y'): 
     season() 

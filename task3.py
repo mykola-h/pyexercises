@@ -5,8 +5,8 @@ print(color.yellow + 'This function calculates the perimeter, area and diagonal 
 cont = 'y' 
   
 def square(): 
-    not_number = color.red + 'The given value "{}" is not a number! Try again.' + color.end
-    invalid_number = color.red + 'The value of the side of a square cannot be 0 or less! Try again.' + color.end
+    not_number = color.red + 'The given value "{}" is not a number!' + color.end
+    invalid_number = color.red + 'The value of the side of a square cannot be 0 or less!' + color.end
     result = color.cyan + 'The square with the side value {0} has:\nPerimeter: {1};\nArea: {2};\nDiagonal: {3}.' + color.end
     a = input(color.green + 'Please, enter the side of a square...' + color.end) 
     try: 

@@ -4,7 +4,7 @@ print(color.yellow + 'This function performs simple arithmetic operations with t
 cont = 'y'  
 
 def arithmetic(): 
-    not_number = color.red + 'The given value "{}" is not a number! Try again.' + color.end
+    not_number = color.red + 'The given value "{}" is not a number!' + color.end
     a = input(color.green + 'Please, enter the first number...' + color.end) 
     try: 
         first_number = int(a) 
@@ -27,11 +27,11 @@ def arithmetic():
     operations = {'+': (first_number + second_number), '-': (first_number - second_number),
                   '*': (first_number * second_number), '/': (first_number / second_number)} 
     if (c not in operations): 
-        print(color.red + 'The given operation is not recognized! Try again.' + color.end) 
+        print(color.red + 'The given operation is not recognized!' + color.end) 
         return 
     else: 
         result = operations[c] 
-        print(color.cyan + 'The result is: {}\033[0;0;0m'.format(result) + color.end) 
+        print(color.cyan + 'The result is: {}'.format(result) + color.end) 
  
 while (cont is 'y'): 
     arithmetic() 
