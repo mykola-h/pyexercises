@@ -4,12 +4,12 @@ from colors import color
  
 print(color.yellow + 'This function calculates amount of money on the bank deposit account for 10% per year' + color.end) 
 cont = 'y' 
-not_number = color.red + 'The given value is not a number!' + color.end
-neg_number = color.red + 'It cannot be equal 0 or a negative value!' + color.end
-result = color.cyan + 'After {} years you will have {:.2f} on your deposit account.' + color.end
 
 def bank(): 
     a = input(color.green + 'Please, enter amount of money for the deposit account...' + color.end) 
+    not_number = color.red + 'The given value is not a number!' + color.end
+    neg_number = color.red + 'It cannot be equal 0 or a negative value!' + color.end
+    result = color.cyan + 'After {} years you will have {:.2f} on your deposit account.' + color.end
     try: 
         amount = int(a) 
     except ValueError: 
